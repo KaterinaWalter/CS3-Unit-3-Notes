@@ -8,7 +8,9 @@ app = Flask(__name__)
 # using the app.route decorator to map the URL
 @app.route("/")
 def index():
-    return render_template("index.html")
+    # Pass variables from Python to HTML!
+    name_data = None
+    return render_template("index.html", name=name_data)
 
 # TO RUN YOUR APP enter "flask run" into the TERMINAL
 # (if you closed your terminal, open it again with CTRL + `)

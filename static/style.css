@@ -1,0 +1,20 @@
+body {
+    background: pink;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: hotpink; 
+    font-style: italic;
+    font-family: Impact;
+    text-align: center;
+    text-shadow: 2px 2px 0px white;
+}
+
+p {
+    background: white;
+    font-weight: bold;
+    padding: 10px;
+    border: 5px double hotpink;
+}
