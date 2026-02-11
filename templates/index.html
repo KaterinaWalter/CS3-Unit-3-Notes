@@ -12,11 +12,28 @@
     
     {% if name %}
     <p>Hello, {{ name }}!</p>
-
     {% else %}
     <p>Hello, visitor!</p>
-
     {% endif %}
+
+    {% if year == 2014 %}
+    <p>OMG I'm graduating this year!</p>
+    {% endif %}
+
+    <hr>
+
+    <ul>
+        {% for item in favorites %}
+        <li> {{ item }} </li>
+        {% endfor %}
+    </ul>
+
+    <dl>
+        {% for key, val in ratings.items() %}
+            <dt> {{ key }} </dt>
+            <dd> {{ val }} </dd>
+        {% endfor %}
+    </dl>
 
 
 
