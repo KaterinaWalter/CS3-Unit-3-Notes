@@ -22,19 +22,22 @@
 
     <hr>
 
+    <div class="flex-container">
     <ul>
+        <h2>👾 Favorite Franchises:</h2>
         {% for item in favorites %}
         <li> {{ item }} </li>
         {% endfor %}
     </ul>
 
     <dl>
+        <h2>🎮 Video Game Commentary:</h2>
         {% for key, val in ratings.items() %}
             <dt> {{ key }} </dt>
             <dd> {{ val }} </dd>
         {% endfor %}
     </dl>
-
+    </div>
 
 
 </body>

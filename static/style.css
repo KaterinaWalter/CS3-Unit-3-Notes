@@ -1,3 +1,9 @@
+/* CSS VARIABLES! For color palettes & consistency */
+:root {
+    --periwinkle: rgb(116, 66, 158);
+}
+
+
 body {
     background: pink;
     color: grey;
@@ -17,4 +23,25 @@ p {
     font-weight: bold;
     padding: 10px;
     border: 5px double hotpink;
+}
+
+.flex-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+ul, dl {
+    border: 2px solid black;
+    display: inline-block;
+    padding: 20px;
+}
+
+dt {
+    background: white;
+    color: hotpink;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }
