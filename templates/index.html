@@ -8,36 +8,48 @@
 
 <body>
 
-    <h1>My First Flask App!</h1>
-    
-    {% if name %}
-    <p>Hello, {{ name }}!</p>
-    {% else %}
-    <p>Hello, visitor!</p>
-    {% endif %}
-
-    {% if year == 2014 %}
-    <p>OMG I'm graduating this year!</p>
-    {% endif %}
-
-    <hr>
-
-    <div class="flex-container">
-    <ul>
-        <h2>👾 Favorite Franchises:</h2>
-        {% for item in favorites %}
-        <li> {{ item }} </li>
-        {% endfor %}
-    </ul>
-
-    <dl>
-        <h2>🎮 Video Game Commentary:</h2>
-        {% for key, val in ratings.items() %}
-            <dt> {{ key }} </dt>
-            <dd> {{ val }} </dd>
-        {% endfor %}
-    </dl>
+    <div class="navbar">
+        <a href=" {{ url_for('index') }} " class="navbar-brand"> Home </a>
+        <a href="#" class="navbar-items"> About </a>
+        <a href="#" class="navbar-items"> Contact </a>
     </div>
+
+    <div class="page-content">
+
+        <h1>My First Flask App!</h1>
+        
+        {% if name %}
+        <p>Hello, {{ name }}!</p>
+        {% else %}
+        <p>Hello, visitor!</p>
+        {% endif %}
+
+        {% if year == 2014 %}
+        <p>OMG I'm graduating this year!</p>
+        {% endif %}
+
+        <hr>
+
+        <ul>
+            <h2>👾 Favorite Franchises:</h2>
+            {% for item in favorites %}
+            <li> {{ item }} </li>
+            {% endfor %}
+        </ul>
+
+        <dl>
+            <h2>🎮 Video Game Commentary:</h2>
+            {% for key, val in ratings.items() %}
+                <dt> {{ key }} </dt>
+                <dd> {{ val }} </dd>
+            {% endfor %}
+        </dl>
+
+    </div>
+
+    <footer>
+      <span>Coded by Katerina &copy; 2026</span>  
+    </footer>
 
 
 </body>
