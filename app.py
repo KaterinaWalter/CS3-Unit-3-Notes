@@ -24,3 +24,7 @@ def index():
 # TO RUN YOUR APP enter "flask run" into the TERMINAL
 # (if you closed your terminal, open it again with CTRL + `)
 # TO STOP click CTRL + C in the TERMINAL
+
+# Set up main method so we can use the RUN button
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
