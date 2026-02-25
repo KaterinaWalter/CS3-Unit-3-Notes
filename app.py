@@ -1,5 +1,4 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template, request
 
 # Create an instance of Flask 
 app = Flask(__name__)
@@ -20,6 +19,22 @@ def index():
     # name is how we refer to it in the HTML template,
     # name_data is the variable declared here in Python
     return render_template("index.html", name=name_data, year=year_data, favorites=favorites_list, ratings=ratings_dict)
+
+
+# Function to handle form submission
+# the app.route decorate maps to the submit button
+@app.route("/submit", methods=['POST'])
+def submit():
+    # Create python variable to hold form data
+    form_data = {
+        'name': request.form.get('name'),
+        'age': request.form.get('age'),
+        'hobby': request.form.get('favorite_hobby'),
+        'color': request.form.get('favorite_color'),
+        'lucky': request.form.get('lucky_number')
+    }
+    # Pass data into results page
+    return render_template("results.html", form_data=form_data)
 
 # TO RUN YOUR APP enter "flask run" into the TERMINAL
 # (if you closed your terminal, open it again with CTRL + `)
